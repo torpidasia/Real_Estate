@@ -1,6 +1,7 @@
 import { useNavigate, Link } from "react-router-dom";
 import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
 import React, { useState } from "react";
+import OAuth from "../components/OAuth";
 const SignUp = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -88,6 +89,7 @@ const SignUp = () => {
           >
             {loading? "Loading...":"Sign Up"}
           </button>
+          <OAuth />
         </form>
         <Link to="/sign-in">
           <p className="mt-6 text-center text-gray-600">
